@@ -9,7 +9,16 @@ body {
     min-height: 100vh;
 }
 
-
+h1 {
+    text-align: center;
+    color: blue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f4ff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 .content, .additional-content {
     display: flex;
