@@ -1,0 +1,86 @@
+body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            background-color: #f4f4f4;
+            flex-direction: column; /* Pour empêcher la barre de défilement horizontale */
+            min-height: 100vh; /* Pour s'assurer que le pied de page reste en bas */
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f4ff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 80px; /* Adjust this value to accommodate the height of the header */
+            flex-grow: 1; /* Pour étirer la section de contenu */
+        }
+
+        .text-container,
+        .image-container {
+            width: 100%;
+            height: calc(100vh - 80px); /* Adjust this value to accommodate the height of the header */
+            overflow-y: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin: 20px;
+          
+        }
+    .step {
+        padding: 50px 20px;
+        margin: 20px 0;
+        background-color: black; /* Fond noir */
+        color: #fff; /* Écriture bleue */
+        flex-grow: 1;
+        min-height: 100vh;
+        text-align: right;
+        border: 5px solid #FF6347; /* Bordure de couleur corail */
+        border-radius: 15px; /* Bordures arrondies */
+    }
+
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Style pour le pied de page */
+        .conclusion {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            flex-shrink: 100; /* Pour empêcher la section de se rétrécir */
+        }
+        
+        .additional-content, .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ajouté pour permettre un meilleur responsive design */
+}
+
+.text-container, .image-container {
+    flex: 1; /* Ajustez cette valeur selon le besoin pour l'équilibre texte-image */
+    max-width: 48%; /* Ajustez selon les besoins pour l'espacement */
+    margin: 10px; /* Assure un peu d'espace entre le texte et l'image */
+}
