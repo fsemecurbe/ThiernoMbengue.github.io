@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleStepEnter(response) {
         // Trouver l'image dans le même conteneur 'content' ou 'additional-content' que le step activé
         var stepElement = response.element;
+        console.log(stepElement);
         var container = stepElement.closest('.content, .additional-content');
         var img = container.querySelector('.image-container img');
+        var stepData = $step.attr('data-step');
         if (img) {
-            img.src = images[response.index];
+            img.src = stepData
         }
     }
 
