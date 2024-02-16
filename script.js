@@ -6,14 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var stepElement = response.element;
         console.log(stepElement);
         var container = stepElement.closest('.content, .additional-content');
+        var stepData  = stepElement.getAttribute('data-step')
         var img = container.querySelector('.image-container img');
         
-        $step.classed('is-active', function (d, i) {
-            return i === response.index;
-        })
+   
         
-        var stepData = $step.attr('data-step');
-        if (img) {
+       if (img) {
             img.src = stepData
         }
     }
