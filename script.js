@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(stepElement);
         var container = stepElement.closest('.content, .additional-content');
         var img = container.querySelector('.image-container img');
-        var stepData = $step.attr('data-step');
+        var stepData = $stepElement.attr('data-step');
         if (img) {
             img.src = stepData
         }
