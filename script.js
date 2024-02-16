@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(stepElement);
         var container = stepElement.closest('.content, .additional-content');
         var img = container.querySelector('.image-container img');
-        var stepData = stepElement.attr('data-step');
+        
+        $step.classed('is-active', function (d, i) {
+            return i === response.index;
+        })
+        
+        var stepData = $step.attr('data-step');
         if (img) {
             img.src = stepData
         }
